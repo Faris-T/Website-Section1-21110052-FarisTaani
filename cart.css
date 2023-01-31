@@ -1,0 +1,164 @@
+/* Cart */
+.cartContainer{
+    position: fixed;
+    width: 0px;
+    height: 100%;
+    color: white;
+    right: 0;
+    top: 0;
+    border-left: 3px solid black;
+    background-color: #2a414d;
+    background-image: url(images/menubackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1111;
+    transition: 0.5s;
+}
+.cart-new-width{
+    transition: 0.5s;
+    width: 400px;
+}
+
+.cartitems{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.cartheader{
+    height: 17%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #5EB2DF;
+    border-bottom: 2px solid black ;
+}
+
+.cartheaderpart1,.cartheaderpart2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.carttitle{
+    font-size: 30px; 
+    text-decoration: underline 3px solid black; 
+    text-shadow: 2px 2px black;
+}
+
+.xbutton{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.pickuptime,.pickupaddress{
+    font-weight: bold;
+    text-decoration: underline wavy 1px red;
+    text-shadow: 1px 1px black;
+}
+
+.cartitem{
+    width: 100%;
+    margin: 10px 0;
+    background-image: url(images/woodpallete.jpg);
+    background-size: cover;
+    height: 150px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.cartitemicon{
+    height: 100%;
+    width: 25%;
+    object-fit: cover;
+    border-right: 2px solid black;
+    background-color: white;
+}
+
+.cartitembody{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px;
+    width: 75%;
+}
+
+.cartitemtop,.cartitembot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cartitembot{
+    margin: -10px -10px;
+}
+
+.cartitemremove, .cartitembot input{
+    height: 40px;
+    width: 50%;
+}
+.cartitemremove{
+    text-align: center;
+    line-height: 40px;
+    background-color: #ff3b3b;
+    cursor: pointer;
+    border: solid 1px black;
+}
+
+.cartitemname,.cartitemprice{
+    margin-top: 10px;
+    font-size: 30px;
+    text-decoration: underline solid #ff3b3b;
+}
+
+
+.cartfooter{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 13%;
+    background-color: #5EB2DF;
+    border-top: 1px solid black;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.checkout{
+        display: block;
+        font-size: 1.5em;
+        font-weight: bold;
+}
+
+#finalprice, .checkout{
+    color: black;
+    width: 50%;
+    margin: auto 0;    
+}
+
+.checkout{
+    text-align: center;
+    background: #75553e;
+    color: white;
+    text-shadow: 2px 2px black;
+    border: 2px black solid;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.checkout:hover{
+    background: white;
+    height: 45px;
+    line-height: 40px;
+    color: #ff3b3b;
+    transition: 0.5s;
+}
+
+#finalprice{
+    text-decoration: underline 2px #2a414d;
+    text-shadow: 1px 1px black;
+    color: white;
+}

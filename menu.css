@@ -1,0 +1,291 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Nav bar */
+.navbar,li,ul,a{
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px #2a414d;
+}
+
+.navbar{
+    background-color: #5EB2DF;
+    height: 60px;
+    border-bottom: 3px solid #4481a2;
+    user-select: none;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+#logo{
+    height: 50px;
+    position: fixed;
+    margin: 5px;
+}
+
+#rest_name{
+    font-size: 25px;
+    line-height: 55px;
+    padding: 0 0 0 60px;
+    
+}
+
+ul{
+    float: right;
+    margin-right: 10px;
+}
+
+li{
+    display: inline-block;
+}
+li:hover{
+    background-color: #4481a2;
+    transition: 500ms;
+}
+
+div ul li a{
+    display: inline-block;
+    line-height: 60px;
+    padding: 0 20px;
+    margin: 0 0px;
+    font-size: 20px;
+    width: 100%;
+}
+
+#menu{
+    height: 50px;
+    float: right;
+    display: none;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    filter: invert(1);
+}
+#menu_active{
+    display: none;
+}
+
+.active{
+    font-weight: 500;
+    border-bottom:4px solid #ff3b3b;
+    line-height: 52px;
+    padding-top: 4px;
+    text-shadow: 2px 2px 1px #2a414d;
+}
+
+/* Footer */
+.navfooter{
+    background-color: #7eb5e8;
+    height: 60px;
+    margin-top: auto;
+}
+
+
+/* Navigation Menu bar */
+.menunavigation{
+    display: block;
+    color: white;
+    height: auto;
+    border-bottom: 2px solid ;
+    background-image: url('images/woodpallete.jpg');
+    
+}
+
+.menuFilters{
+    width: 100%;
+    display: flex;
+    justify-content:space-around ;
+    margin: 20px 0;
+    text-underline-offset: 2px;
+}
+
+.menuFilters input{
+    display: none;
+}
+
+.menuFilters label{
+    cursor: pointer;
+    font-size: 30px;
+    text-shadow: 2px 2px black;
+    font-weight: 400;
+}
+
+.menunavigation h1{
+    text-align: center;
+    padding-top: 65px;
+    text-decoration: underline 3px wavy #ffac71;
+    text-underline-offset: 3px;
+}
+
+.navigation-active{
+    cursor: default;
+    text-shadow: 0px;
+    text-decoration: underline 2px #ffac71;
+    font-weight: 600;
+}
+
+
+
+
+
+/* Navigations Items */
+.menu-Items{
+    width: 900px;
+    margin: 40px auto;
+}
+
+/* Items */
+.items{
+    display: flex;
+    flex-direction: column;
+}
+
+.item1,.item2,.item3,.item4{
+    background-color: #7B8C4F;
+    height: 250px;
+    margin: 20px 0;
+    display: flex;
+    border: 2px solid #3A2414;
+    
+}
+ 
+
+
+.itemImage{
+    width: 25%;
+    height: 100%;
+    padding: 10px;
+    object-fit: cover;
+    background-color: white;
+    border-right: 2px solid #3A2414;
+}
+
+.text-container{
+    /* margin: 10px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-shadow: 1px 1px black;
+    margin: 0 10px;
+
+}
+
+.title{
+    margin-top: 20px;
+    font-size: 40px;
+    text-decoration: underline solid #3A2414;
+}
+
+.descripion{
+    margin-top: 10px;
+    width: 100%;
+    font-size: larger;
+}
+
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.button-container input,.button-container button{
+    height: 30px;
+    width: 30%;
+}
+
+#background{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -100;
+    filter: blur(5px);
+}
+
+.itemheader{
+display: flex;
+justify-content: space-between;
+padding-right: 10px;
+}
+
+
+
+/* Responsive design */
+@media screen and (max-width:900px) {
+    .menu-Items{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+
+    /* Nav bar */
+    #menu{
+        display: block;
+    }
+
+    .icon{
+        margin-top: 100px;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #9dc9fb;
+        top: 60px;
+        left: -100%;
+        text-align: left;
+        transition: all .5s;
+    }
+
+    li{
+        display: block;
+        padding: 10px;
+        margin: 13px 0;
+    }
+
+    div ul li a{
+        font-size: x-large;
+        width: 100%;
+    }
+
+    #menu_active:checked ~ ul{
+        left: 0;
+    }
+
+    /*  */
+    .footerItems{
+        display: block;
+    }
+    #copyright{
+        display: block;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width:560px){
+    .title{
+        font-size: 40px
+    }
+
+    .itemheader{
+        display: flex;
+        justify-content: none;
+        flex-direction: column;
+        padding-right: 10px;
+    }
+    .descripion{
+        display: none;
+    }
+}
+
